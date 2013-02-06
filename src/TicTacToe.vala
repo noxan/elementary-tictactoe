@@ -62,6 +62,12 @@ namespace TicTacToe {
             }
         }
 
+        public void reset() {
+            for(int i=0; i<blocks.length; i++) {
+                blocks[i].reset();
+            }
+        }
+
         private void change_current_player() {
             if(current_player == Player.PLAYER1) {
                 current_player = Player.PLAYER2;
