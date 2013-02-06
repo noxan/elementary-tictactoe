@@ -4,6 +4,7 @@ namespace TicTacToe {
     class TicTacToe : Granite.Application {
         private Window window;
         private Box content;
+        private Grid container;
 
         construct {
             program_name = "Tic Tac Toe";
@@ -17,7 +18,16 @@ namespace TicTacToe {
             this.window.height_request = 480;
             this.window.window_position = Gtk.WindowPosition.CENTER;
 
+            this.container = new Grid();
+
+            for(int i=0; i<9; i++) {
+                Button button = new Button();
+                button.label = @"Button $i";
+                this.container.attach(button, i%3, i/3, 1, 1);
+            }
+
             this.content = new Box(Gtk.Orientation.VERTICAL, 0);
+            this.content.add(container);
             this.window.add(content);
 
             this.window.show_all();
