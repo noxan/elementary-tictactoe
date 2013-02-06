@@ -19,6 +19,8 @@ namespace TicTacToe {
             this.window.window_position = Gtk.WindowPosition.CENTER;
 
             this.container = new Grid();
+            this.container.row_spacing = 5;
+            this.container.column_spacing = 5;
 
             for(int i=0; i<9; i++) {
                 Button button = new Button();
