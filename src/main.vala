@@ -24,6 +24,9 @@ namespace TicTacToe {
                 Button button = new Button();
                 button.label = @"Button $i";
                 button.expand = true;
+                button.clicked.connect ((source) => {
+                    source.sensitive = false;
+                });
                 this.container.attach(button, i%3, i/3, 1, 1);
             }
 
