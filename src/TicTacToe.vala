@@ -6,7 +6,11 @@ namespace TicTacToe {
             expand = true;
             clicked.connect ((source) => {
                 source.sensitive = false;
-                draw.connect((context) => {
+            });
+            draw.connect((context) => {
+                if(sensitive) {
+                    return base.draw(context);
+                } else {
                     int width = get_allocated_width();
                     int height = get_allocated_height();
 
@@ -15,7 +19,7 @@ namespace TicTacToe {
                     context.fill();
 
                     return true;
-                });
+                }
             });
         }
     }
