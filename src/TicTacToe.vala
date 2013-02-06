@@ -18,6 +18,10 @@ namespace TicTacToe {
             this.player = player;
         }
 
+        public void reset() {
+            sensitive = true;
+        }
+
         public override bool draw(Cairo.Context context) {
             if(sensitive) {
                 return base.draw(context);
