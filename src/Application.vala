@@ -30,6 +30,7 @@ namespace TicTacToe {
 
             this.toolbar = new Gtk.Toolbar();
             Gtk.ToolButton reset = new Gtk.ToolButton(new Gtk.Image.from_icon_name("process-stop", Gtk.IconSize.BUTTON), "Restart game");
+            reset.set_sensitive(false);
             reset.clicked.connect(() => {
                 this.board.reset();
             });
@@ -50,6 +51,13 @@ namespace TicTacToe {
             container.add(content);
 
             this.window.add(container);
+
+            board.game_event.connect((event) => {
+                if(event != GameEvent.DRAW) {
+                    content.remove(board);
+                }
+                reset.set_sensitive(true);
+            });
 
             this.window.show_all();
         }
