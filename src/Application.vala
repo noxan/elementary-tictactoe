@@ -7,6 +7,9 @@ namespace TicTacToe {
 
         construct {
             program_name = "Tic Tac Toe";
+            exec_name = "tictactoe";
+            app_years = "2013";
+            app_icon = "application-default-icon";
 
             about_authors = {"noxan <noxan@byteweaver.net>"};
             about_documenters = {};
