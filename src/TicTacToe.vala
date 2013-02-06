@@ -11,9 +11,11 @@ namespace TicTacToe {
             set_size_request(64, 64);
 
             expand = true;
-            clicked.connect ((source) => {
-                source.sensitive = false;
-            });
+        }
+
+        public void mark(Player player) {
+            sensitive = false;
+            this.player = player;
         }
 
         public override bool draw(Cairo.Context context) {
