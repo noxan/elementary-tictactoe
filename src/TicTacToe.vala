@@ -1,7 +1,7 @@
 using Gtk;
 
 namespace TicTacToe {
-    class TicTacToe : Granite.Application {
+    public class Application : Granite.Application {
         private Window window;
         private Box content;
         private Grid container;
