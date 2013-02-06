@@ -44,5 +44,13 @@ namespace TicTacToe {
                 attach(block, i%3, i/3, 1, 1);
             }
         }
+
+        private void change_current_player() {
+            if(current_player == Player.PLAYER1) {
+                current_player = Player.PLAYER2;
+            } else {
+                current_player = Player.PLAYER1;
+            }
+        }
     }
 }
