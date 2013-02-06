@@ -23,6 +23,7 @@ namespace TicTacToe {
             for(int i=0; i<9; i++) {
                 Button button = new Button();
                 button.label = @"Button $i";
+                button.expand = true;
                 this.container.attach(button, i%3, i/3, 1, 1);
             }
 
