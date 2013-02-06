@@ -25,7 +25,11 @@ namespace TicTacToe {
                 int width = get_allocated_width();
                 int height = get_allocated_height();
 
-                context.set_source_rgba(1, 0, 0, 1);
+                if(player == Player.PLAYER1) {
+                    context.set_source_rgba(1, 0, 0, 1);
+                } else {
+                    context.set_source_rgba(1, 1, 0, 1);
+                }
                 context.arc(width/2, height/2, int.min(width, height) / 2, 0, 2 * Math.PI);
                 context.fill();
 
