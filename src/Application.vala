@@ -11,7 +11,7 @@ namespace TicTacToe {
             app_years = "2013";
             app_icon = "application-default-icon";
 
-            about_authors = {"noxan <noxan@byteweaver.net>"};
+            about_authors = {"Richard Stromer <noxan@byteweaver.net>"};
             about_documenters = {};
             about_artists = {};
             about_comments = "A simple board game for two players.";
