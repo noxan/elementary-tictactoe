@@ -1,4 +1,9 @@
 namespace TicTacToe {
+    public enum Player {
+        PLAYER1,
+        PLAYER2
+    }
+
     public class Block : Gtk.Button {
         public Block() {
             set_size_request(64, 64);
