@@ -11,6 +11,10 @@ namespace TicTacToe {
         public override void activate() {
             this.window = new Window();
             this.window.set_application(this);
+
+            this.window.width_request = 320;
+            this.window.height_request = 480;
+
             this.window.show_all();
         }
     }
