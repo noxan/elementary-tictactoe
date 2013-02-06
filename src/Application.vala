@@ -20,6 +20,12 @@ namespace TicTacToe {
             Gtk.Box container = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
 
             this.toolbar = new Gtk.Toolbar();
+            Gtk.ToolButton reset = new Gtk.ToolButton(new Gtk.Image.from_icon_name("process-stop", Gtk.IconSize.BUTTON), "Restart game");
+            reset.clicked.connect(() => {
+                this.board.reset();
+            });
+            this.toolbar.add(reset);
+
             container.add(this.toolbar);
 
             this.content = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
