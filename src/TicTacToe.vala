@@ -33,6 +33,8 @@ namespace TicTacToe {
     }
 
     public class Board : Gtk.Grid {
+        private Player current_player = Player.PLAYER1;
+
         public Board() {
             row_spacing = 5;
             column_spacing = 5;
