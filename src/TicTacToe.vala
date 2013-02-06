@@ -43,6 +43,10 @@ namespace TicTacToe {
 
             for(int i=0; i<9; i++) {
                 Block block = new Block();
+                block.clicked.connect ((source) => {
+                    block.mark(current_player);
+                    change_current_player();
+                });
                 attach(block, i%3, i/3, 1, 1);
             }
         }
