@@ -44,18 +44,21 @@ namespace TicTacToe {
 
     public class Board : Gtk.Grid {
         private Player current_player = Player.PLAYER1;
+        private Block[] blocks;
 
         public Board() {
             row_spacing = 5;
             column_spacing = 5;
 
-            for(int i=0; i<9; i++) {
-                Block block = new Block();
-                block.clicked.connect ((source) => {
-                    block.mark(current_player);
+            blocks = new Block[9];
+
+            for(int i=0; i<blocks.length; i++) {
+                blocks[i] = new Block();
+                blocks[i].clicked.connect ((source) => {
+                    ((Block) source).mark(current_player);
                     change_current_player();
                 });
-                attach(block, i%3, i/3, 1, 1);
+                attach(blocks[i], i%3, i/3, 1, 1);
             }
         }
 
