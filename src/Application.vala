@@ -26,6 +26,13 @@ namespace TicTacToe {
             });
             this.toolbar.add(reset);
 
+            var slider = new Gtk.ToolItem ();
+            slider.set_expand(true);
+            this.toolbar.add(slider);
+
+            var menu = new Gtk.Menu();
+            var appmenu = this.create_appmenu (menu);
+            this.toolbar.add(appmenu);
             container.add(this.toolbar);
 
             this.content = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
