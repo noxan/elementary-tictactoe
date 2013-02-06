@@ -4,7 +4,7 @@ namespace TicTacToe {
     public class Application : Granite.Application {
         private Window window;
         private Box content;
-        private Grid container;
+        private Board board;
 
         construct {
             program_name = "Tic Tac Toe";
@@ -14,26 +14,13 @@ namespace TicTacToe {
             this.window = new Window();
             this.window.set_application(this);
 
-            this.window.width_request = 320;
-            this.window.height_request = 480;
             this.window.window_position = Gtk.WindowPosition.CENTER;
 
-            this.container = new Grid();
-            this.container.row_spacing = 5;
-            this.container.column_spacing = 5;
-
-            for(int i=0; i<9; i++) {
-                Button button = new Button();
-                button.label = @"Button $i";
-                button.expand = true;
-                button.clicked.connect ((source) => {
-                    source.sensitive = false;
-                });
-                this.container.attach(button, i%3, i/3, 1, 1);
-            }
+            this.board = new Board();
 
             this.content = new Box(Gtk.Orientation.VERTICAL, 0);
-            this.content.add(container);
+            this.content.margin = 5;
+            this.content.add(board);
             this.window.add(content);
 
             this.window.show_all();
