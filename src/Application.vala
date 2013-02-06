@@ -14,6 +14,7 @@ namespace TicTacToe {
             about_authors = {"noxan <noxan@byteweaver.net>"};
             about_documenters = {};
             about_artists = {};
+            about_comments = "A simple game based on a 3x3 grid for two players.";
         }
 
         public override void activate() {
