@@ -15,6 +15,7 @@ namespace TicTacToe {
 
             this.window.width_request = 320;
             this.window.height_request = 480;
+            this.window.window_position = Gtk.WindowPosition.CENTER;
 
             this.content = new Box(Gtk.Orientation.VERTICAL, 0);
             this.window.add(content);
