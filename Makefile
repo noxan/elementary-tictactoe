@@ -1,2 +1,2 @@
 all:
-	valac src/main.vala -o tictactoe
+	valac src/main.vala -o tictactoe --pkg granite
