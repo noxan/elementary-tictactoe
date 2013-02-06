@@ -7,6 +7,10 @@ namespace TicTacToe {
 
         construct {
             program_name = "Tic Tac Toe";
+
+            about_authors = {"noxan <noxan@byteweaver.net>"};
+            about_documenters = {};
+            about_artists = {};
         }
 
         public override void activate() {
