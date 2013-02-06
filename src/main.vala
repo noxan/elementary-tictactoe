@@ -2,6 +2,10 @@ using Gtk;
 
 namespace TicTacToe {
     class TicTacToe : Granite.Application {
+        construct {
+            program_name = "Tic Tac Toe";
+        }
+
         public override void activate() {
         }
     }
