@@ -5,6 +5,8 @@ namespace TicTacToe {
     }
 
     public class Block : Gtk.Button {
+        private Player player { public get; private set; }
+
         public Block() {
             set_size_request(64, 64);
 
